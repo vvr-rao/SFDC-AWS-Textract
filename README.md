@@ -11,7 +11,8 @@ Solution has following components;
 
 The methods are asynchronous so I had to use the following pattern
 
-Lambda1.py - this initates detect text using textract.startDocumentTextDetection. Code is configured to create a message in an SNS topic on completion of a scan
+Lambda1.py - this initates detect text using textract.startDocumentTextDetection. It is exposed the Salesforce via the API Gateway. Code is configured to create a message in an SNS topic on completion of a scan.
+
 Lambda2.py - this has been set as a Subscriber to the above SNS topic. Fires when a message is placed on SNS topic
 
-3) Also tested out zipping of files in S3. Follow file has sample code - Zipper.py
+3) Also tested out zipping of files in S3. Follow file has sample code - Zipper.py. Also exposed to Salesforce via API Gateway
