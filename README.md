@@ -15,4 +15,4 @@ Solution has following components;
 
    Lambda2.py - this has been set as a Subscriber to the above SNS topic. Fires when a message is placed on SNS topic
 
-3) Also tested out zipping of files in S3. Follow file has sample code - Zipper.py. Also exposed to Salesforce via API Gateway
+3) Also tested out zipping of files in S3. Follow file has sample code - Zip-func.py. Also exposed to Salesforce via API Gateway
