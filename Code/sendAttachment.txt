@@ -1,0 +1,13 @@
+Attachment att = new Attachment();
+
+att = [SELECT body from Attachment where id = '<hard coded Id for example>'];
+
+HttpRequest req = new HttpRequest();
+req.setMethod('PUT');
+req.setHeader('Content-Type','application/octet-stream');
+req.setEndpoint('<API_GATEWAY_ENDPOINT>/<bucket>/<filename>');
+	
+req.setBodyAsBlob(att.body);
+
+Http h = new Http();
+HttpResponse res = h.send(req); 

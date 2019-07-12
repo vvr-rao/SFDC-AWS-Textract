@@ -1,0 +1,13 @@
+HttpRequest req = new HttpRequest();
+        req.setMethod('GET');
+        req.setHeader('Content-Type','application/json');
+        req.setEndpoint('<API_GATEWAY_ENDPOINT>/<BUCKETNAME>/<FILE_NAME>');
+                        
+        Http h = new Http();
+        HttpResponse res = h.send(req); 
+
+       system.debug (res.getBody());
+       
+       case thisobj = [select id, Textract__c from Case where id=:ObjId];
+       thisobj.Textract__c = res.getBody();
+       update thisobj;

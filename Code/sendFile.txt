@@ -1,0 +1,15 @@
+//retrieve a file body as a blob
+ContentVersion cv = new ContentVersion();
+cv = [SELECT VersionData FROM ContentVersion WHERE ContentDocumentId = '<hard coded Id for example>' AND IsLatest = true];
+
+//retrieve a file body as a blob
+
+HttpRequest req = new HttpRequest();
+req.setMethod('PUT');
+req.setHeader('Content-Type','application/pdf');
+req.setEndpoint('<API_GATEWAY_ENDPOINT>/<bucket>/<FILE_NAME>');
+	
+req.setBodyAsBlob(cv.VersionData);
+
+Http h = new Http();
+HttpResponse res = h.send(req); 
