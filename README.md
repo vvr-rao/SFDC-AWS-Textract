@@ -9,10 +9,10 @@ Solution has following components;
   Files - sendFile.txt and sendAttachment.txt - have sample code of how you can send a File or Attachment from SFDC to API Gateway
 2) set of components to do a detect text in Textract. Used textract.startDocumentTextDetection and textract.getDocumentTextDetection since I needed to detect text in PDFs and they were the only functions with support that.
 
-The methods are asynchronous so I had to use the following pattern
+  The methods are asynchronous so I had to use the following pattern;
 
-Lambda1.py - this initates detect text using textract.startDocumentTextDetection. It is exposed the Salesforce via the API Gateway. Code is configured to create a message in an SNS topic on completion of a scan.
+    Lambda1.py - this initates detect text using textract.startDocumentTextDetection. It is exposed the Salesforce via the API Gateway. Code is configured to create a message in an SNS topic on completion of a scan.
 
-Lambda2.py - this has been set as a Subscriber to the above SNS topic. Fires when a message is placed on SNS topic
+    Lambda2.py - this has been set as a Subscriber to the above SNS topic. Fires when a message is placed on SNS topic
 
 3) Also tested out zipping of files in S3. Follow file has sample code - Zipper.py. Also exposed to Salesforce via API Gateway
