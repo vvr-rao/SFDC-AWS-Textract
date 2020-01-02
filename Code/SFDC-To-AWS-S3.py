@@ -39,6 +39,6 @@ headers = {  'Authorization': 'Bearer ' + sessionId })
 #print('output file: '  + os.path.realpath(f1.name))
 
 f = io.BytesIO(response.content)
-s3.meta.client.upload_fileobj(f, 'picamerastore', filename)
+s3.meta.client.upload_fileobj(f, 'BUCKET_NAME', filename)
 
 response.close()
