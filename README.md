@@ -20,4 +20,4 @@ Solution has following components;
 3) Also tested out zipping of files in S3 using JSZip.The following file has sample code - 'Zip-func.js'. Also exposed to Salesforce via API Gateway
 
 EDIT: Jan 02, 2020. Was asked a question on whether it was posible to transfer files from Salesforce to AWS S3 without using the API Gateway. If you can host code, this is posible via Python. You will need to install the Simple_Salesforce and Boto3 libraries (Python SDKs for Salesforce and AWS), the following file has sample code on how to do this: 
-## SFDC-To-AWS-S3.py  
+#### SFDC-To-AWS-S3.py  
