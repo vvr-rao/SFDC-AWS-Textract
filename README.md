@@ -1,7 +1,7 @@
 # SFDC-AWS-Textract
-Uses AWS Serverless components to expose Textract for use viaAPI Gaeway. Invoked from Salesforce using HTTP calls
+Uses AWS Serverless components to expose Textract for use via API Gateway. Invoked from Salesforce using HTTP calls
 
-This was a quick POC to show how to invoke the new AWS Textract Detect Text functionality from Salesforce. Utilized Serverless components extensively and exposed the functionality via API Gateway.
+This was a quick POC to show how to invoke the new AWS Textract Detect Text functionality from Salesforce. Utilized Serverless components extensively and exposed the functionality via API Gateway. Additional detail can be found on my blog here: https://vvrrao.home.blog/sfdc-aws-uploading-files-from-sfdc-to-aws-s3-and-scanning-using-textract/
 
 Solution has following components;
 1) AN API Gateway endpoint which serves as a Proxy for S3. Instuctions to implement this are provided by AWS here:
